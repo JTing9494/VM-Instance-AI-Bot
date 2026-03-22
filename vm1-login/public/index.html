@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Chatbot Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box glass">
+            <h2>Login to Gemini AI Chatbot</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="userId">Username</label>
+                    <input type="text" id="userId" name="userId" required>
+                </div>
+                <div class="input-group">
+                    <label for="companyId">Password</label>
+                    <input type="password" id="companyId" name="companyId" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <div id="loginError" class="error-message"></div>
+            </form>
+        </div>
+        
+        <div id="dashboard" class="dashboard glass" style="display: none;">
+            <div class="dashboard-header">
+                <h2>Company Dashboard</h2>
+                <div class="user-info">
+                    <span>Welcome, <strong id="username"></strong>!</span>
+                    <span>Company: <strong id="companyName"></strong></span>
+                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+            
+            <div class="dashboard-content">
+                <div class="data-panel">
+                    <h3>Company Data</h3>
+                    <div id="companyData" class="data-list">
+                        <!-- Company data will be populated here -->
+                    </div>
+                </div>
+                
+                <div class="chat-panel">
+                    <h3>Gemini AI Chatbot</h3>
+                    <div id="chatMessages" class="chat-messages">
+                        <!-- Chat messages will be populated here -->
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Ask Gemini AI about your company data...">
+                        <button id="sendBtn" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>REBUILD FORCED AT Fri, Mar 20, 2026  8:34:19 PM

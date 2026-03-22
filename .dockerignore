@@ -1,0 +1,193 @@
+# Environment variables (might contain secrets)
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Directory for instrumented libs
+lib-cov
+
+# Coverage directory
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Build systems
+.grunt
+bower_components/
+.lock-wscript
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# TypeScript
+*.tsbuildinfo
+.npm
+.eslintcache
+.meteor
+
+# Microbundle
+.rpt2_cache
+.rts2_cache_cs
+.rts2_cache_ts
+.rts2_cache_js
+
+# Bundle output
+.cache
+.dist
+.temp
+public/build
+
+# Frameworks
+.vite/
+.vuepress/dist/
+.docusaurus/
+.cache-loader/
+
+# IDEs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.iml
+*.code-workspace
+
+# Containers
+.devcontainer/
+
+# OS
+.DS_Store
+ehthumbs_vista
+Icon?
+Thumbs.db
+
+# Files
+*~
+*.swp
+*.swo
+*$
+*_flymake.*
+*_flymake
+*~
+*.avi
+*.gif
+*.jpeg
+*.jpg
+*.mp3
+*.mp4
+*.webm
+*.wav
+
+# Misc
+.sass-cache
+.sftp-config.json
+.tern-port
+.vscode-test
+.yarn-integrity
+.dockerignore
+.gitignore
+.dockerfile
+npm-debug.log
+Makefile
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.override.yml
+Dockerfile.local
+docker-compose.local.yml
+docker-compose.*.local.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.spyderproject
+.spyproject
+.ropeproject
+/site
+.mypy_cache/
+.dmypy.json
+.dmypy.txt
+.pyre/
+.pyre/
+.pytype/
+.pytype/
+cython_debug/
+
+# Specific to our project
+# Ignore local Docker configs that might contain secrets
+vm1-login/.env
+vm2-backend/.env
+vm3-storage/.env
+vm1-login/env/
+vm2-backend/env/
+vm3-storage/env/
+vm1-login/venv/
+vm2-backend/venv/
+vm3-storage/venv/
+data/
+cache/
+tmp/
+temp/
+*/~
+*/*.bak
+*/*.tmp

@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  vm1-login:
+    build: ./vm1-login
+    ports:
+      - "8080:80"
+    networks:
+      - vpc-net
+    depends_on:
+      - vm2-backend
+
+  vm2-backend:
+    build: ./vm2-backend
+    ports:
+      - "8000:8000"
+    networks:
+      - vpc-net
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_HOST=vm3-storage
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - RSYNC_PASSWORD=${RSYNC_PASSWORD}
+    depends_on:
+      - vm3-storage
+
+  vm3-storage:
+    build: ./vm3-storage
+    ports:
+      - "3306:3306"
+      - "873:873"
+    networks:
+      - vpc-net
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - RSYNC_PASSWORD=${RSYNC_PASSWORD}
+    volumes:
+      - ./vm3-storage/init:/docker-entrypoint-initdb.d
+      - ./vm3-storage/rsync_data:/rsync_data
+      - "/d/AI Books/AI:/ai_books"
+
+networks:
+  vpc-net:
+    driver: bridge
