@@ -68,7 +68,7 @@ MYSQL_ROOT_PASSWORD=rootpassword
 MYSQL_DATABASE=company_data
 MYSQL_USER=app_user
 MYSQL_PASSWORD=apppassword
-GEMINI_API_KEY=AIzaSyD_SD9sjhST2IxhfY8UUdYmvuVRR7NVvkk
+GEMINI_API_KEY=AIza...
 JWT_SECRET_KEY=supersecretkey
 RSYNC_PASSWORD=rsyncpassword123
 ```
